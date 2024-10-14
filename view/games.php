@@ -7,6 +7,8 @@
 
         <?php
 
+            // move from here down to a modal (all db work should be done in a modal) ---------------
+
             $file = fopen("data/game_data.csv", "rb");
 
             if (!$file) {
@@ -21,6 +23,8 @@
                 if (!$game) continue;
                 $games[] = $game;
             }
+
+            // to here ------------------------------------------------
 
             foreach ($games as $game) {
                 echo("<div class='mainGameDiv'>

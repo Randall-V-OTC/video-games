@@ -11,6 +11,8 @@
 
             $logged_in = false;
 
+            // move these to a modal (any db work should be there) -------
+
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $filtered_username = filter_input(INPUT_POST, 'username');
@@ -37,6 +39,8 @@
                 }
 
                 fclose($file);
+
+                // to here --------------------------------------------
 
                 if ($logged_in) {
                     include "includes/games.php";
